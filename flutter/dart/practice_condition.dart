@@ -35,4 +35,27 @@ void main() {
 
   print("$num is ${(num > 0) ? "positive" : "negative"}");
 
+  // create a simple calculator
+  print("Enter a number: ");
+  int? n1 = int.parse(stdin.readLineSync()!);
+  print("Enter a number: ");
+  int? n2 = int.parse(stdin.readLineSync()!);
+  print("What calculation do you want to perform (+,-,x,/) ? ");
+  String? calc = stdin.readLineSync();
+
+  switch (calc) {
+    case "+":
+      print("$n1 + $n2 = ${n1 + n2}");
+      break;
+    case "-":
+      print("$n1 - $n2 = ${n1 - n2}");
+      break;
+    case "x":
+      print("$n1 x $n2 = ${n1 * n2}");
+      break;
+    case "/":
+      print("$n1 / $n2 = ${n1 / n2}");
+      break;
+  }
+
 }
